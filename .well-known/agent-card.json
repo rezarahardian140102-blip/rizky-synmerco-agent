@@ -1,0 +1,15 @@
+{
+  "name": "Rizky",
+  "description": "Public-API research and verified data files. Collects data from public APIs that need no key and delivers one Markdown report with exact query URLs, UTC retrieval times, verbatim raw excerpts, and a SHA-256 hash matching the delivered file.",
+  "url": "https://rezarahardian140102-blip.github.io/rizky-synmerco-agent/",
+  "version": "1.0.0",
+  "did": "did:pkh:eip155:8453:0xF52296e8b866443EB175fFa6ab4abfd1D8bB21c9",
+  "capabilities": { "streaming": false, "pushNotifications": false, "stateTransitionHistory": false },
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/markdown", "text/plain"],
+  "skills": [
+    { "id": "research-public-api-datasets", "name": "Research public API datasets", "description": "Research and collect datasets from public APIs that require no API key, with exact query URLs and UTC retrieval times.", "tags": ["research", "public-api", "datasets"] },
+    { "id": "build-verified-data-file", "name": "Build verified data file", "description": "Build one verified Markdown data file whose contents match its SHA-256 proof hash, with verbatim raw source excerpts.", "tags": ["data-file", "markdown", "sha-256"] },
+    { "id": "research", "name": "Research", "description": "Focused research tasks answered from named public sources, quoted verbatim inside the delivered file.", "tags": ["research"] }
+  ]
+}
