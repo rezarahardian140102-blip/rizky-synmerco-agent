@@ -4,26 +4,28 @@ Federal Register API, no key. Job job_891a010cee11416a. Escrow esc_95fba8a59d434
 Seller: Rizky, DID did:pkh:eip155:8453:0xF52296e8b866443EB175fFa6ab4abfd1D8bB21c9. Buyer: Talent Bench.
 Deliver by: 2026-11-17T08:49:42Z (17 Nov 2026 15:49 WIB). Submit only after PULL 3.
 
+REVISION 1 (2026-11-15; resubmitted after the evaluator's review of 2026-11-15 03:18:48Z, round 1 of 3). Changes vs the first submission: (A3) the PULL 3 final rules cells for 2025-23854 and 2026-00591 are back to none — final rules 2026-23288 and 2026-23281 were published 2026-11-16, after the PULL 3 date, and have no per-RIN response in the PROOF; PULL 3 counts are now closed 86, with a later final rule 42, and PULL 3 vs PULL 2 has no change. (D2) the covered column is rewritten for all 138 proposals, one line each naming who would be covered, taken from each proposal's full text (raw_text_url), replacing the first sentence of the API abstract. (Item 3) comments_close_on for the nine withdrawal notices now holds the withdrawal effective date stated in each quoted DATES sentence, and the PROOF 'date stated' values are corrected to match; none stays only for correction C1-2025-19864. (A4) each pull section now has its own calendar of open deadlines. The three CSVs were corrected identically and now share SHA-256 824cbd6e90b1e0d9315636d554f13f1e27569a19ae052757e9ba8990bbf44378 (pull-time SHAs were 3de641f46b5515e5b51c4fc7b659f9c4678df995788463b935940b6e20f8c5bf for PULL 1/2 and f763d106cc9eaa3912cf1ec03ab677cca6a12fca8cac4a16559543f7ef475537 for PULL 3; the platform PULL notes record the pull-time SHAs, and CORRECTED PULL notes with the new SHA were posted). Items the review marked CANNOT BE FIXED (D1, D3, TIMED PULLS per-RIN repetition) are not fixed here: the 14/15 Nov Date headers were not captured when they ran and cannot be recovered now; the Method and PROOF describe the pulls as they ran.
+
 ## Summary
 
 Three timed pulls of the same six queries (type PRORULE, publication 2025-01-01 to 2026-10-31, one request per agency, paged until every document each count reports; a joint proposal counts once). 138 unique proposed rules in every pull.
 
 | Pull | UTC time (source time) | Rows | SHA-256 | Open for comment | Closed, no final rule | With a later final rule | No RIN |
 |---|---|---|---|---|---|---|---|
-| PULL 1 | 2026-11-13T01:01:37Z (first request; HTTP Date Fri, 13 Nov 2026 01:01:47 GMT) | 138 | 3de641f46b5515e5b51c4fc7b659f9c4678df995788463b935940b6e20f8c5bf | 10 | 86 | 42 | 9 |
-| PULL 2 | 2026-11-14 01:59-02:02 UTC (browser verification) | 138 | 3de641f46b5515e5b51c4fc7b659f9c4678df995788463b935940b6e20f8c5bf | 10 | 86 | 42 | 9 |
-| PULL 3 | 2026-11-15 01:40-01:45 UTC (browser verification) | 138 | f763d106cc9eaa3912cf1ec03ab677cca6a12fca8cac4a16559543f7ef475537 | 10 | 84 | 44 | 9 |
+| PULL 1 | 2026-11-13T01:01:37Z (first request; HTTP Date Fri, 13 Nov 2026 01:01:47 GMT) | 138 | 824cbd6e90b1e0d9315636d554f13f1e27569a19ae052757e9ba8990bbf44378 | 10 | 86 | 42 | 9 |
+| PULL 2 | 2026-11-14 01:59-02:02 UTC (browser verification) | 138 | 824cbd6e90b1e0d9315636d554f13f1e27569a19ae052757e9ba8990bbf44378 | 10 | 86 | 42 | 9 |
+| PULL 3 | 2026-11-15 01:40-01:45 UTC (browser verification) | 138 | 824cbd6e90b1e0d9315636d554f13f1e27569a19ae052757e9ba8990bbf44378 | 10 | 86 | 42 | 9 |
 
 Per agency (queried counts, same in all three pulls): CFPB 23, FDIC 28, OCC 25, Federal Reserve 20, NCUA 45, FinCEN 14 (155 agency rows, 138 unique after deduping joint proposals).
 
-PULL 2 vs PULL 1: no change. PULL 3 vs PULL 2: 2 proposals gained a final rule (see Changes).
+PULL 2 vs PULL 1: no change. PULL 3 vs PULL 2: no change (see Changes; the two 2026-11-16 final rules found in the PULL 3 RULE crawl were not counted — published after the PULL 3 date, with no per-RIN response in the PROOF).
 
 ## synmerco-data
 
 ```
-3de641f46b5515e5b51c4fc7b659f9c4678df995788463b935940b6e20f8c5bf fin-proposals-pull1.csv
-3de641f46b5515e5b51c4fc7b659f9c4678df995788463b935940b6e20f8c5bf fin-proposals-pull2.csv
-f763d106cc9eaa3912cf1ec03ab677cca6a12fca8cac4a16559543f7ef475537 fin-proposals-pull3.csv
+824cbd6e90b1e0d9315636d554f13f1e27569a19ae052757e9ba8990bbf44378 fin-proposals-pull1.csv
+824cbd6e90b1e0d9315636d554f13f1e27569a19ae052757e9ba8990bbf44378 fin-proposals-pull2.csv
+824cbd6e90b1e0d9315636d554f13f1e27569a19ae052757e9ba8990bbf44378 fin-proposals-pull3.csv
 ```
 
 ## ACCEPTANCE (numbered checklist)
@@ -38,26 +40,42 @@ Yes. PROOF below lists, for every one of the 138 proposals, its returned comment
 
 ### 3. Every RIN has its final-rule request shown, and the final rules column agrees with those responses
 
-Yes. PROOF lists all 176 unique RINs, each with its own request (conditions[regulation_id_number]=<RIN>, conditions[type][]=RULE), UTC time, Date header, count and every returned document_number, type and publication_date, as run in PULL 1 (2026-11-13 ~01:20-01:24 UTC). The final rules column lists, per proposal, the final rules published after the proposal, or none, or no RIN where the proposal has no RIN. PULL 3 re-checked final rules with two aggregate RULE queries (all six agencies): publication_date >= 2026-10-01 (12 rules) and 2025-01-01 to 2026-09-30 (105 rules). Two new final rules attach to proposals (see Changes, PULL 3 vs PULL 2); every other RULE RIN belongs to no proposal in the set or was already in the PULL 1 proof.
+Yes. PROOF lists all 176 unique RINs, each with its own request (conditions[regulation_id_number]=<RIN>, conditions[type][]=RULE), UTC time, Date header, count and every returned document_number, type and publication_date, as run in PULL 1 (2026-11-13 ~01:20-01:24 UTC). The final rules column lists, per proposal, the final rules published after the proposal, or none, or no RIN where the proposal has no RIN. PULL 3 re-checked final rules with two aggregate RULE queries (all six agencies): publication_date >= 2026-10-01 (12 rules) and 2025-01-01 to 2026-09-30 (105 rules). Two of the 12 rules (2026-23288 for RIN 3133-AF75 and 2026-23281 for RIN 3133-AF85) belong to proposals in the set, but they were published 2026-11-16, after the PULL 3 date, and have no per-RIN response in the PROOF, so the PULL 3 final rules column shows none for those two proposals (REVISION 1); every other RULE RIN belongs to no proposal in the set or was already in the PULL 1 proof.
 
 ### 4. The counts, open and closed lists and the calendar agree with the CSV they use and each pull's date
 
-Yes. Counts per pull are in the Summary table above and are computed from the CSV of that pull (open = comments_close_on on or after the pull's UTC date). The open list, the closed-without-final list and the calendar below are taken from the PULL 3 CSV; the PULL 1 and PULL 2 lists differ only as stated under Changes (the two proposals that gained a final rule were in the PULL 1 / PULL 2 closed-without-final lists).
+Yes. Counts per pull are in the Summary table above and are computed from the CSV of that pull (open = comments_close_on on or after the pull's UTC date). Each pull section below has its own open list, closed-without-final list and calendar, all taken from that pull's CSV. The three pulls agree: the same 10 proposals are open in every pull, and the closed and with-final-rule lists are identical in all three pulls (no change between pulls).
 
 ### 5. The PLATFORM RECORD shows a PULL 1: note and each later PULL note at least its wait after the one before, each with its CSV's row count and SHA-256; each pull's source time is later than the previous pull's; the change counts agree with the CSV files
 
 - PULL 1 note: recorded 2026-11-13 01:26:39Z, 138 rows, SHA-256 3de641f46b5515e5b51c4fc7b659f9c4678df995788463b935940b6e20f8c5bf.
 - PULL 2 note: recorded 2026-11-14 02:43:08Z (25h 16m after the PULL 1 note), 138 rows, SHA-256 3de641f46b5515e5b51c4fc7b659f9c4678df995788463b935940b6e20f8c5bf.
 - PULL 3 note: recorded 2026-11-15 02:45:29.065245+00 (at least 24h after the PULL 2 note), 138 rows, SHA-256 f763d106cc9eaa3912cf1ec03ab677cca6a12fca8cac4a16559543f7ef475537.
+- The notes above record the pull-time SHA-256 of each CSV. REVISION 1 corrected the CSVs (see the REVISION 1 note at the top); the corrected files share SHA-256 824cbd6e90b1e0d9315636d554f13f1e27569a19ae052757e9ba8990bbf44378, and CORRECTED PULL 1/2/3 notes with the new SHA-256 were posted.
 - Source times: PULL 1 first request HTTP Date Fri, 13 Nov 2026 01:01:47 GMT; PULL 2 first verification fetch 2026-11-14 01:59 UTC; PULL 3 first verification fetch 2026-11-15 01:40 UTC. Each later than the previous.
-- Change counts: PULL 2 vs PULL 1: new 0, gone 0, changed 0; 138 = 138 + 0 - 0. PULL 3 vs PULL 2: new 0, gone 0, changed 2; 138 = 138 + 0 - 0. Both agree with the CSV files.
+- Change counts: PULL 2 vs PULL 1: new 0, gone 0, changed 0; 138 = 138 + 0 - 0. PULL 3 vs PULL 2: new 0, gone 0, changed 0; 138 = 138 + 0 - 0. Both agree with the CSV files. (The first submission showed changed 2 for PULL 3 vs PULL 2; REVISION 1 set those two final rules cells back to none.)
 
 ## PULL 1 (UTC date 2026-11-13)
 
 Rows: 138. Open for comment (comments_close_on on or after 2026-11-13): 10. Closed with no final rule: 86. With a later final rule: 42. No RIN: 9.
 Per agency (queried): CFPB 23, FDIC 28, OCC 25, Federal Reserve 20, NCUA 45, FinCEN 14.
 
-Open for comment (10) and calendar: the same 10 proposals as in PULL 3 — see the PULL 3 section below (no deadline changed between pulls).
+### Calendar of open deadlines
+
+(Open for comment: the same 10 proposals as in PULL 3 — no deadline changed between pulls.)
+
+| comments_close_on | document_number | title |
+|---|---|---|
+| 2026-11-23 | 2026-19308 | Merger Transactions |
+| 2026-11-23 | 2026-19310 | State Bank Parity |
+| 2026-11-30 | 2026-19860 | Implementing the Federal Reserve Board's Responsibilities Under the GENIUS Act |
+| 2026-11-30 | 2026-19899 | Application Procedures for Board-Supervised Insured Depository Institutions Seeking Approval for a Subsidiary To Issue Payment Stablecoins |
+| 2026-12-14 | 2026-21087 | Corporate Credit Unions; Fidelity Bond and Insurance Coverage for Federally Insured Credit Unions |
+| 2026-12-14 | 2026-21088 | Powers of Federal Credit Unions |
+| 2026-12-14 | 2026-21089 | Central Liquidity Facility |
+| 2026-12-21 | 2026-21508 | Conversion to State-Chartered Credit Union |
+| 2026-12-21 | 2026-21509 | Nonconforming Investment Special Reserve |
+| 2026-12-21 | 2026-21512 | Notification to Members/Shareholders |
 
 Closed with no final rule (86 document numbers):
 
@@ -210,7 +228,22 @@ No RIN (9 document numbers):
 Rows: 138. Open for comment (comments_close_on on or after 2026-11-14): 10. Closed with no final rule: 86. With a later final rule: 42. No RIN: 9.
 Per agency (queried): CFPB 23, FDIC 28, OCC 25, Federal Reserve 20, NCUA 45, FinCEN 14.
 
-Open for comment (10) and calendar: the same 10 proposals as in PULL 3 — see the PULL 3 section below (no deadline changed between pulls).
+### Calendar of open deadlines
+
+(Open for comment: the same 10 proposals as in PULL 3 — no deadline changed between pulls.)
+
+| comments_close_on | document_number | title |
+|---|---|---|
+| 2026-11-23 | 2026-19308 | Merger Transactions |
+| 2026-11-23 | 2026-19310 | State Bank Parity |
+| 2026-11-30 | 2026-19860 | Implementing the Federal Reserve Board's Responsibilities Under the GENIUS Act |
+| 2026-11-30 | 2026-19899 | Application Procedures for Board-Supervised Insured Depository Institutions Seeking Approval for a Subsidiary To Issue Payment Stablecoins |
+| 2026-12-14 | 2026-21087 | Corporate Credit Unions; Fidelity Bond and Insurance Coverage for Federally Insured Credit Unions |
+| 2026-12-14 | 2026-21088 | Powers of Federal Credit Unions |
+| 2026-12-14 | 2026-21089 | Central Liquidity Facility |
+| 2026-12-21 | 2026-21508 | Conversion to State-Chartered Credit Union |
+| 2026-12-21 | 2026-21509 | Nonconforming Investment Special Reserve |
+| 2026-12-21 | 2026-21512 | Notification to Members/Shareholders |
 
 Closed with no final rule (86 document numbers):
 
@@ -360,7 +393,7 @@ No RIN (9 document numbers):
 
 ## PULL 3 (UTC date 2026-11-15)
 
-Rows: 138. Open for comment (comments_close_on on or after 2026-11-15): 10. Closed with no final rule: 84. With a later final rule: 44. No RIN: 9.
+Rows: 138. Open for comment (comments_close_on on or after 2026-11-15): 10. Closed with no final rule: 86. With a later final rule: 42. No RIN: 9.
 Per agency (queried): CFPB 23, FDIC 28, OCC 25, Federal Reserve 20, NCUA 45, FinCEN 14.
 
 ### Open for comment
@@ -397,18 +430,18 @@ Per agency (queried): CFPB 23, FDIC 28, OCC 25, Federal Reserve 20, NCUA 45, Fin
 
 | document_number | title | comments_close_on | final rules |
 |---|---|---|---|
-| 2024-31385 | Fees for Instantaneously Declined Transactions; Withdrawal of Proposed Rule | none | none |
+| 2024-31385 | Fees for Instantaneously Declined Transactions; Withdrawal of Proposed Rule | 2025-01-14 | none |
 | 2025-00633 | Prohibited Terms and Conditions in Agreements for Consumer Financial Products or Services (Regulation AA) | 2025-04-01 | none |
 | 2025-00565 | Electronic Fund Transfers Through Accounts Established Primarily for Personal, Family, or Household Purposes Using Emerging Payment Mechanisms | 2025-03-31 | no RIN |
 | 2025-03547 | Protecting Americans From Harmful Data Broker Practices (Regulation V); Extension of Comment Period | 2025-04-02 | none |
 | 2025-03685 | Fair Credit Reporting Act (Regulation V); Identity Theft and Coerced Debt; Extension of Comment Period | 2025-04-07 | no RIN |
-| 2025-04088 | Unsafe and Unsound Banking Practices: Brokered Deposits Restrictions; Guidelines Establishing Standards for Corporate Governance and Risk Management for Covered Institutions With Total Consolidated Assets of $10 Billion or More; Regulations Implementing the Change in Bank Control Act; Withdrawal | none | none |
-| 2025-08644 | Protecting Americans From Harmful Data Broker Practices (Regulation V); Withdrawal of Proposed Rule | none | none |
-| 2025-08645 | Prohibited Terms and Conditions in Agreements for Consumer Financial Products or Services (Regulation AA); Withdrawal of Proposed Rule | none | none |
-| 2025-08646 | Electronic Fund Transfers Through Accounts Established Primarily for Personal, Family, or Household Purposes Using Emerging Payment Mechanisms; Withdrawal | none | no RIN |
+| 2025-04088 | Unsafe and Unsound Banking Practices: Brokered Deposits Restrictions; Guidelines Establishing Standards for Corporate Governance and Risk Management for Covered Institutions With Total Consolidated Assets of $10 Billion or More; Regulations Implementing the Change in Bank Control Act; Withdrawal | 2025-03-14 | none |
+| 2025-08644 | Protecting Americans From Harmful Data Broker Practices (Regulation V); Withdrawal of Proposed Rule | 2025-05-15 | none |
+| 2025-08645 | Prohibited Terms and Conditions in Agreements for Consumer Financial Products or Services (Regulation AA); Withdrawal of Proposed Rule | 2025-05-15 | none |
+| 2025-08646 | Electronic Fund Transfers Through Accounts Established Primarily for Personal, Family, or Household Purposes Using Emerging Payment Mechanisms; Withdrawal | 2025-05-15 | no RIN |
 | 2025-11248 | Consumer Financial Civil Penalty Fund Rule Amendment | 2025-07-18 | no RIN |
 | 2025-12807 | Regulatory Publication and Voluntary Review as Contemplated by the Economic Growth and Regulatory Paperwork Reduction Act of 1996 | 2025-10-08 | no RIN |
-| 2025-13504 | Parent Companies of Industrial Banks and Industrial Loan Companies; Withdrawal of Proposed Rule | none | none |
+| 2025-13504 | Parent Companies of Industrial Banks and Industrial Loan Companies; Withdrawal of Proposed Rule | 2025-07-18 | none |
 | 2025-13559 | Community Reinvestment Act Regulations | 2025-08-18 | none |
 | 2025-14060 | Regulatory Publication and Review Under the Economic Growth and Regulatory Paperwork Reduction Act of 1996 | 2025-10-23 | none |
 | 2025-15088 | Defining Larger Participants of the Consumer Reporting Market | 2025-09-22 | none |
@@ -417,7 +450,7 @@ Per agency (queried): CFPB 23, FDIC 28, OCC 25, Federal Reserve 20, NCUA 45, Fin
 | 2025-15091 | Defining Larger Participants of the Consumer Debt Collection Market | 2025-09-22 | none |
 | 2025-16139 | Personal Financial Data Rights Reconsideration | 2025-10-21 | none |
 | 2025-16352 | Legal Standard Applicable to Supervisory Designation Proceedings | 2025-09-25 | none |
-| 2025-19690 | Registry of Supervised Nonbanks That Use Form Contracts To Impose Terms and Conditions That Seek To Waive or Limit Consumer Legal Protections; Withdrawal of Proposed Rule | none | no RIN |
+| 2025-19690 | Registry of Supervised Nonbanks That Use Form Contracts To Impose Terms and Conditions That Seek To Waive or Limit Consumer Legal Protections; Withdrawal of Proposed Rule | 2025-10-29 | no RIN |
 | 2025-19927 | Proposal of Special Measure Regarding Transactions Involving Ten Mexican Gambling Establishments as a Class of Transactions of Primary Money Laundering Concern | 2025-12-17 | none |
 | 2025-22487 | Corporate Credit Unions | 2026-02-09 | none |
 | 2025-22488 | Supervisory Committee Audits and Verifications | 2026-02-09 | none |
@@ -425,8 +458,10 @@ Per agency (queried): CFPB 23, FDIC 28, OCC 25, Federal Reserve 20, NCUA 45, Fin
 | 2025-22490 | Guidance on Response Programs for Unauthorized Access to Member Information and Member Notice | 2026-02-09 | none |
 | 2025-23510 | Approval Requirements for Issuance of Payment Stablecoins by Subsidiaries of FDIC-Supervised Insured Depository Institutions | 2026-02-17 | none |
 | 2025-23547 | Community Reinvestment Act: Simplified Strategic Plan Process for Community Banks | 2026-02-20 | no RIN |
+| 2025-23854 | Accuracy of Advertising and Notice of Insured Status | 2026-02-27 | none |
 | 2025-23856 | Catastrophic Act Reporting | 2026-02-27 | none |
 | 2025-23986 | OCC Guidelines Establishing Heightened Standards for Certain Large Insured National Banks, Insured Federal Savings Associations, and Insured Federal Branches; Technical Amendments | 2026-03-02 | none |
+| 2026-00591 | Nondiscrimination Requirements | 2026-03-16 | none |
 | 2026-01696 | Public Unit and Nonmember Shares | 2026-03-30 | none |
 | 2026-01697 | Requirements for Insurance; Maximum Borrowing Authority | 2026-03-30 | none |
 | 2026-02665 | Approval Requirements for Issuance of Payment Stablecoins by Subsidiaries of FDIC-Supervised Insured Depository Institutions; Extension of Comment Period | 2026-05-18 | none |
@@ -477,8 +512,8 @@ Per agency (queried): CFPB 23, FDIC 28, OCC 25, Federal Reserve 20, NCUA 45, Fin
 | 2026-17822 | Violations of Laws or Regulations | 2026-10-01 | none |
 | 2026-17871 | Proposal of Special Measure Regarding Banque Misr UAE as a Financial Institution Operating Outside of the United States of Primary Money Laundering Concern | 2026-10-01 | none |
 | 2026-20371 | Proposal of Special Measure Prohibiting the Transmittal of Funds Regarding Transactions Involving the A7 Network's Sub-Agents | 2026-11-04 | none |
-| 2026-20429 | Proposal of Special Measure Regarding Convertible Virtual Currency Mixing, as a Class of Transactions of Primary Money Laundering Concern; Withdrawal | none | none |
-| 2026-20430 | Requirements for Certain Transactions Involving Convertible Virtual Currency or Digital Assets; Withdrawal | none | none |
+| 2026-20429 | Proposal of Special Measure Regarding Convertible Virtual Currency Mixing, as a Class of Transactions of Primary Money Laundering Concern; Withdrawal | 2026-10-06 | none |
+| 2026-20430 | Requirements for Certain Transactions Involving Convertible Virtual Currency or Digital Assets; Withdrawal | 2026-10-06 | none |
 | 2026-20509 | Loans to Executive Officers, Directors, and Principal Shareholders of Member Banks: Bank Holding Companies | 2026-11-04 | none |
 | 2026-20735 | Extensions of Credit to Insiders | 2026-11-04 | none |
 
@@ -508,13 +543,11 @@ Per agency (queried): CFPB 23, FDIC 28, OCC 25, Federal Reserve 20, NCUA 45, Fin
 | 2025-20211 | Enhanced Transparency and Public Accountability of the Supervisory Stress Test Models and Scenarios; Modifications to the Capital Planning and Stress Capital Buffer Requirement Rule, Enhanced Prudential Standards Rule, and Regulation LL | 2026-20247 (2026-10-02) |
 | 2025-21087 | Enhanced Transparency and Public Accountability of the Supervisory Stress Test Models and Scenarios; Modifications to the Capital Planning and Stress Capital Buffer Requirement Rule, Enhanced Prudential Standards Rule, and Regulation LL; Extension of Comment Period | 2026-20247 (2026-10-02) |
 | 2025-21625 | Regulatory Capital Rule: Revisions to the Community Bank Leverage Ratio Framework | 2026-08298 (2026-04-29) |
-| 2025-23854 | Accuracy of Advertising and Notice of Insured Status | 2026-23288 (2026-11-16) |
 | 2025-23855 | Limits on Loans to Other Credit Unions | 2026-16035 (2026-08-06) |
 | 2025-23857 | Suretyship and Guaranty; Segregated Deposit and Collateral | 2026-16027 (2026-08-06) |
 | 2025-23987 | Preemption Determination: State Interest-on-Escrow Laws | 2026-10037 (2026-05-19) |
 | 2025-23988 | Real Estate Lending Escrow Accounts | C1-2026-10036 (2026-06-29); 2026-10036 (2026-05-19) |
 | 2026-00372 | National Bank Chartering | 2026-04088 (2026-03-02) |
-| 2026-00591 | Nondiscrimination Requirements | 2026-23281 (2026-11-16) |
 | 2026-00592 | Chartering and Field of Membership for Federal Credit Unions-Interpretive Rulings and Policy Statements | 2026-16031 (2026-08-06) |
 | 2026-00594 | Chartering and Field of Membership for Federal Credit Unions-Interpretive Rulings and Policy Statements | 2026-16024 (2026-08-06) |
 | 2026-00595 | Corporate Credit Unions | 2026-16022 (2026-08-06) |
@@ -555,18 +588,7 @@ no change. Row counts: PULL 1 = 138, PULL 2 = 138. 138 = 138 + 0 - 0 (new 0, gon
 
 ### PULL 3 vs PULL 2
 
-new 0, gone 0, changed 2. Row counts: PULL 2 = 138, PULL 3 = 138. 138 = 138 + 0 - 0.
-
-Changed rows (same key, a Changes column differs):
-
-| document_number | column | PULL 2 value | PULL 3 value |
-|---|---|---|---|
-| 2025-23854 | final rules | none | 2026-23288 (2026-11-16) |
-| 2026-00591 | final rules | none | 2026-23281 (2026-11-16) |
-
-Why: two NCUA final rules were published 2026-11-16 (already indexed by the Federal Register on 2026-11-15) for RINs that had no final rule in PULL 1 or PULL 2:
-- 2025-23854, Accuracy of Advertising and Notice of Insured Status (NCUA, published 2025-12-29, RIN 3133-AF75): final rule 2026-23288 published 2026-11-16. The PULL 1 per-RIN request for 3133-AF75 (2026-11-13T01:20:50Z) returned count 0; the PULL 2 RULE query (>= 2026-10-01) did not list it because it did not exist yet.
-- 2026-00591, Nondiscrimination Requirements (NCUA, published 2026-01-14, RIN 3133-AF85): final rule 2026-23281 published 2026-11-16. The PULL 1 per-RIN request for 3133-AF85 (2026-11-13T01:21:10Z) returned count 0.
+new 0, gone 0, changed 0. Row counts: PULL 2 = 138, PULL 3 = 138. 138 = 138 + 0 - 0.
 
 ## Method
 
@@ -574,9 +596,9 @@ Source: Federal Register API, host www.federalregister.gov, endpoint /api/v1/doc
 
 Deviations and notes:
 - The job text lists conditions[publication_date][is]=2025-01-01..2026-10-31; a probe showed that form returns count 0 for every agency, so the pull used gte/lte instead (same source, same endpoint, same date window).
-- comments_close_on: the API value when present. 10 documents had none in the API; their raw text was fetched and the DATES paragraph read. 9 are withdrawal notices: their DATES paragraph states a withdrawal effective date, not a comment deadline, so the cell is "none" (the DATES sentence is quoted in PROOF). 1 is correction C1-2025-19864 (no DATES paragraph, no comment deadline) -> "none"; its covered line was taken from the correction text.
+- comments_close_on: the API value when present. 10 documents had none in the API; their raw text was fetched and the DATES paragraph read. 9 are withdrawal notices: the cell holds the withdrawal effective date stated in the DATES paragraph (the DATES sentence is quoted in PROOF; REVISION 1 corrected the 'date stated' values to the withdrawal date). 1 is correction C1-2025-19864 (no DATES paragraph, no comment deadline) -> "none"; its covered line was taken from the correction text.
 - cfr parts: from the API cfr_references ("12 CFR 1024" style). 3 documents have an empty cell: their cfr_references carry title 12, chapter 0, part null (EGRPRA review notices, no specific part).
-- covered: first sentence of the API abstract (one line); C1-2025-19864 used its correction text.
+- covered: one line per proposal stating who would be covered by that proposal, taken from the proposal's full text (raw_text_url). C1-2025-19864 used its correction text. (REVISION 1: the first submission used the first sentence of the API abstract; the column was rewritten from the full texts.)
 - Final-rule link (no RIN: write no RIN): for each RIN, one request with conditions[regulation_id_number] set to it and conditions[type][] RULE (PULL 1, 176 requests, 0 errors); only final rules published after the proposal are listed, else "none".
 - PULL 2 and PULL 3 ran while the VM's direct egress was down (all of google.com, federalregister.gov and synmerco-escrow.onrender.com timed out from the VM). Both pulls were verified through browser fetches of the SAME Federal Register API endpoint with the SAME queries, checking every dimension that can change between pulls: the per-agency document sets, comments_close_on for all 138 documents, and new final rules. Fields that are immutable once a document is published (title, publication_date, agencies, RINs, dockets, CFR refs, abstract) are reused from the PULL 1 direct-API records. PULL 3 additionally ran a second RULE query (publication 2025-01-01 to 2026-09-30, 105 rules) to close the residual gap PULL 2 disclosed (a final rule published before 2026-10-01 but indexed after the PULL 1 RIN sweep); no such rule attaches to any proposal.
 - PULL 3 source times are browser crawl times (the browser fetch path does not expose the HTTP Date header). PULL 1 source times are the direct API HTTP Date headers.
@@ -784,9 +806,9 @@ URL pattern (one request per RIN): https://www.federalregister.gov/api/v1/docume
 ### PULL 1 — text fetches (documents with no API comments_close_on)
 
 - 2024-31385 | fetched UTC 2026-11-13T01:17:50.500351+00:00 | Date: Fri, 13 Nov 2026 01:18:03 GMT | text: https://www.federalregister.gov/documents/full_text/text/2025/01/14/2024-31385.txt
-  DATES sentence: "The proposed rule published January 31, 2024, at 89 FR 6031 is  withdrawn as of January 14, 2025." | date stated: 2024-01-31
+  DATES sentence: "The proposed rule published January 31, 2024, at 89 FR 6031 is  withdrawn as of January 14, 2025." | date stated: 2025-01-14
 - 2025-04088 | fetched UTC 2026-11-13T01:17:50.501568+00:00 | Date: Fri, 13 Nov 2026 01:18:04 GMT | text: https://www.federalregister.gov/documents/full_text/text/2025/03/14/2025-04088.txt
-  DATES sentence: "The FDIC is withdrawing the proposed rules published at 89 FR  68244 (August 23, 2024), 88 FR 70391 (October 11, 2023), and 89 FR  67002 (August 19, 2024) as of March 14, 2025." | date stated: 2024-08-23
+  DATES sentence: "The FDIC is withdrawing the proposed rules published at 89 FR  68244 (August 23, 2024), 88 FR 70391 (October 11, 2023), and 89 FR  67002 (August 19, 2024) as of March 14, 2025." | date stated: 2025-03-14
 - 2025-08644 | fetched UTC 2026-11-13T01:17:50.502250+00:00 | Date: Fri, 13 Nov 2026 01:18:03 GMT | text: https://www.federalregister.gov/documents/full_text/text/2025/05/15/2025-08644.txt
   DATES sentence: "The proposed rule is withdrawn as of May 15, 2025." | date stated: 2025-05-15
 - 2025-08645 | fetched UTC 2026-11-13T01:17:50.503087+00:00 | Date: Fri, 13 Nov 2026 01:18:03 GMT | text: https://www.federalregister.gov/documents/full_text/text/2025/05/15/2025-08645.txt
@@ -794,13 +816,13 @@ URL pattern (one request per RIN): https://www.federalregister.gov/api/v1/docume
 - 2025-08646 | fetched UTC 2026-11-13T01:17:50.504189+00:00 | Date: Fri, 13 Nov 2026 01:18:04 GMT | text: https://www.federalregister.gov/documents/full_text/text/2025/05/15/2025-08646.txt
   DATES sentence: "The proposed interpretive rule is withdrawn as of May 15, 2025." | date stated: 2025-05-15
 - 2025-13504 | fetched UTC 2026-11-13T01:17:50.506942+00:00 | Date: Fri, 13 Nov 2026 01:18:03 GMT | text: https://www.federalregister.gov/documents/full_text/text/2025/07/18/2025-13504.txt
-  DATES sentence: "The FDIC is withdrawing the proposed rule published at 89 FR  65556 (August 12, 2024) as of July 18, 2025." | date stated: 2024-08-12
+  DATES sentence: "The FDIC is withdrawing the proposed rule published at 89 FR  65556 (August 12, 2024) as of July 18, 2025." | date stated: 2025-07-18
 - 2025-19690 | fetched UTC 2026-11-13T01:17:50.510904+00:00 | Date: Fri, 13 Nov 2026 01:18:03 GMT | text: https://www.federalregister.gov/documents/full_text/text/2025/10/29/2025-19690.txt
-  DATES sentence: "The Proposed Rule published February 1, 2023, 88 FR 6906, is  withdrawn as of October 29, 2025." | date stated: 2023-02-01
+  DATES sentence: "The Proposed Rule published February 1, 2023, 88 FR 6906, is  withdrawn as of October 29, 2025." | date stated: 2025-10-29
 - 2026-20429 | fetched UTC 2026-11-13T01:17:50.514997+00:00 | Date: Fri, 13 Nov 2026 01:18:03 GMT | text: https://www.federalregister.gov/documents/full_text/text/2026/10/06/2026-20429.txt
-  DATES sentence: "FinCEN is withdrawing the proposed rulemaking published at 88 FR  72701 (October 23, 2023), as of October 6, 2026." | date stated: 2023-10-23
+  DATES sentence: "FinCEN is withdrawing the proposed rulemaking published at 88 FR  72701 (October 23, 2023), as of October 6, 2026." | date stated: 2026-10-06
 - 2026-20430 | fetched UTC 2026-11-13T01:18:02.757449+00:00 | Date: Fri, 13 Nov 2026 01:18:12 GMT | text: https://www.federalregister.gov/documents/full_text/text/2026/10/06/2026-20430.txt
-  DATES sentence: "FinCEN is withdrawing the proposed rule published at 85 FR 83840  (December 23, 2020), as of October 6, 2026." | date stated: 2020-12-23
+  DATES sentence: "FinCEN is withdrawing the proposed rule published at 85 FR 83840  (December 23, 2020), as of October 6, 2026." | date stated: 2026-10-06
 - C1-2025-19864 | fetched UTC 2026-11-13T01:18:02.817030+00:00 | Date: Fri, 13 Nov 2026 01:18:13 GMT | text: https://www.federalregister.gov/documents/full_text/text/2026/02/25/C1-2025-19864.txt
   DATES sentence: "Correction notice: no DATES paragraph and no comment deadline stated; it corrects proposed rule document 2025-19864 (Equal Credit Opportunity Act, Regulation B)." | date stated: None
 
@@ -812,7 +834,7 @@ RULE query (all six agencies, publication_date >= 2026-10-01), fields[]=document
 ### PULL 3 — verification fetches (browser, 2026-11-15 01:40-01:45 UTC)
 
 Same agency queries as PULL 2 (fields[]=document_number,comments_close_on). Crawl times: CFPB 01:40 UTC (count 23), FDIC 01:41 UTC (28), OCC 01:42 UTC (25), Federal Reserve 01:42 UTC (20), NCUA 01:43 UTC (45), FinCEN 01:43 UTC (14). Sets identical to PULL 1; comments_close_on identical for all 138 documents.
-RULE query 1 (all six agencies, publication_date >= 2026-10-01, crawl 01:44 UTC), fields[]=document_number,publication_date,regulation_id_numbers: 12 rules — 2026-23288 (2026-11-16, 3133-AF75), 2026-23286 (2026-11-16, 3133-AG13), 2026-23281 (2026-11-16, 3133-AF85), 2026-23280 (2026-11-16, 3133-AG14), 2026-23060 (2026-11-12, 7100-AH33), 2026-22962 (2026-11-10, no RIN), 2026-22538 (2026-11-04, 3133-AG16), 2026-22537 (2026-11-04, 3133-AG12), 2026-22536 (2026-11-04, 3133-AF86), 2026-21706 (2026-10-23, 1557-AF41), 2026-20247 (2026-10-02, 7100-AH05), 2026-20246 (2026-10-02, 7100-AG92). Of these, 3133-AF75 and 3133-AF85 are RINs of proposals in the set (see Changes); 3133-AG13, 3133-AG14, 7100-AH33, 3133-AG16, 3133-AG12 belong to no proposal in the set; the rest were already in the PULL 1 proof.
+RULE query 1 (all six agencies, publication_date >= 2026-10-01, crawl 01:44 UTC), fields[]=document_number,publication_date,regulation_id_numbers: 12 rules — 2026-23288 (2026-11-16, 3133-AF75), 2026-23286 (2026-11-16, 3133-AG13), 2026-23281 (2026-11-16, 3133-AF85), 2026-23280 (2026-11-16, 3133-AG14), 2026-23060 (2026-11-12, 7100-AH33), 2026-22962 (2026-11-10, no RIN), 2026-22538 (2026-11-04, 3133-AG16), 2026-22537 (2026-11-04, 3133-AG12), 2026-22536 (2026-11-04, 3133-AF86), 2026-21706 (2026-10-23, 1557-AF41), 2026-20247 (2026-10-02, 7100-AH05), 2026-20246 (2026-10-02, 7100-AG92). Of these, 3133-AF75 and 3133-AF85 are RINs of proposals in the set, but their final rules (2026-23288 and 2026-23281) were published 2026-11-16, after the PULL 3 date, and have no per-RIN response in the PROOF, so they are NOT counted in the PULL 3 final rules column (REVISION 1; see Changes); 3133-AG13, 3133-AG14, 7100-AH33, 3133-AG16, 3133-AG12 belong to no proposal in the set; the rest were already in the PULL 1 proof.
 RULE query 2 (all six agencies, publication 2025-01-01 to 2026-09-30, crawl 01:45 UTC), same fields: 105 rules. Every RIN was checked against the 176 proposal RINs and the PULL 1 proof: no rule in this set attaches to any proposal that the PULL 1 proof did not already list. Full list:
 
 - 2026-20037 | 2026-09-30 | 7100-AH32
@@ -1066,13 +1088,13 @@ One line per proposal: document_number | comments_close_on as returned (null = a
 
 ### Dates sentences used (the 10 proposals with no API comments_close_on)
 
-- 2024-31385: "The proposed rule published January 31, 2024, at 89 FR 6031 is  withdrawn as of January 14, 2025." (date stated: 2024-01-31) -> comments_close_on cell: none
-- 2025-04088: "The FDIC is withdrawing the proposed rules published at 89 FR  68244 (August 23, 2024), 88 FR 70391 (October 11, 2023), and 89 FR  67002 (August 19, 2024) as of March 14, 2025." (date stated: 2024-08-23) -> comments_close_on cell: none
-- 2025-08644: "The proposed rule is withdrawn as of May 15, 2025." (date stated: 2025-05-15) -> comments_close_on cell: none
-- 2025-08645: "The notice of proposed rulemaking is withdrawn as of May 15,  2025." (date stated: 2025-05-15) -> comments_close_on cell: none
-- 2025-08646: "The proposed interpretive rule is withdrawn as of May 15, 2025." (date stated: 2025-05-15) -> comments_close_on cell: none
-- 2025-13504: "The FDIC is withdrawing the proposed rule published at 89 FR  65556 (August 12, 2024) as of July 18, 2025." (date stated: 2024-08-12) -> comments_close_on cell: none
-- 2025-19690: "The Proposed Rule published February 1, 2023, 88 FR 6906, is  withdrawn as of October 29, 2025." (date stated: 2023-02-01) -> comments_close_on cell: none
-- 2026-20429: "FinCEN is withdrawing the proposed rulemaking published at 88 FR  72701 (October 23, 2023), as of October 6, 2026." (date stated: 2023-10-23) -> comments_close_on cell: none
-- 2026-20430: "FinCEN is withdrawing the proposed rule published at 85 FR 83840  (December 23, 2020), as of October 6, 2026." (date stated: 2020-12-23) -> comments_close_on cell: none
+- 2024-31385: "The proposed rule published January 31, 2024, at 89 FR 6031 is  withdrawn as of January 14, 2025." (date stated: 2025-01-14) -> comments_close_on cell: 2025-01-14
+- 2025-04088: "The FDIC is withdrawing the proposed rules published at 89 FR  68244 (August 23, 2024), 88 FR 70391 (October 11, 2023), and 89 FR  67002 (August 19, 2024) as of March 14, 2025." (date stated: 2025-03-14) -> comments_close_on cell: 2025-03-14
+- 2025-08644: "The proposed rule is withdrawn as of May 15, 2025." (date stated: 2025-05-15) -> comments_close_on cell: 2025-05-15
+- 2025-08645: "The notice of proposed rulemaking is withdrawn as of May 15,  2025." (date stated: 2025-05-15) -> comments_close_on cell: 2025-05-15
+- 2025-08646: "The proposed interpretive rule is withdrawn as of May 15, 2025." (date stated: 2025-05-15) -> comments_close_on cell: 2025-05-15
+- 2025-13504: "The FDIC is withdrawing the proposed rule published at 89 FR  65556 (August 12, 2024) as of July 18, 2025." (date stated: 2025-07-18) -> comments_close_on cell: 2025-07-18
+- 2025-19690: "The Proposed Rule published February 1, 2023, 88 FR 6906, is  withdrawn as of October 29, 2025." (date stated: 2025-10-29) -> comments_close_on cell: 2025-10-29
+- 2026-20429: "FinCEN is withdrawing the proposed rulemaking published at 88 FR  72701 (October 23, 2023), as of October 6, 2026." (date stated: 2026-10-06) -> comments_close_on cell: 2026-10-06
+- 2026-20430: "FinCEN is withdrawing the proposed rule published at 85 FR 83840  (December 23, 2020), as of October 6, 2026." (date stated: 2026-10-06) -> comments_close_on cell: 2026-10-06
 - C1-2025-19864: "Correction notice: no DATES paragraph and no comment deadline stated; it corrects proposed rule document 2025-19864 (Equal Credit Opportunity Act, Regulation B)." (date stated: None) -> comments_close_on cell: none
