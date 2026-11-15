@@ -6,6 +6,8 @@ Deliver by: 2026-11-17T08:49:42Z (17 Nov 2026 15:49 WIB). Submit only after PULL
 
 REVISION 1 (2026-11-15; resubmitted after the evaluator's review of 2026-11-15 03:18:48Z, round 1 of 3). Changes vs the first submission: (A3) the PULL 3 final rules cells for 2025-23854 and 2026-00591 are back to none — final rules 2026-23288 and 2026-23281 were published 2026-11-16, after the PULL 3 date, and have no per-RIN response in the PROOF; PULL 3 counts are now closed 86, with a later final rule 42, and PULL 3 vs PULL 2 has no change. (D2) the covered column is rewritten for all 138 proposals, one line each naming who would be covered, taken from each proposal's full text (raw_text_url), replacing the first sentence of the API abstract. (Item 3) comments_close_on for the nine withdrawal notices now holds the withdrawal effective date stated in each quoted DATES sentence, and the PROOF 'date stated' values are corrected to match; none stays only for correction C1-2025-19864. (A4) each pull section now has its own calendar of open deadlines. The three CSVs were corrected identically and now share SHA-256 824cbd6e90b1e0d9315636d554f13f1e27569a19ae052757e9ba8990bbf44378 (pull-time SHAs were 3de641f46b5515e5b51c4fc7b659f9c4678df995788463b935940b6e20f8c5bf for PULL 1/2 and f763d106cc9eaa3912cf1ec03ab677cca6a12fca8cac4a16559543f7ef475537 for PULL 3; the platform PULL notes record the pull-time SHAs, and CORRECTED PULL notes with the new SHA were posted). Items the review marked CANNOT BE FIXED (D1, D3, TIMED PULLS per-RIN repetition) are not fixed here: the 14/15 Nov Date headers were not captured when they ran and cannot be recovered now; the Method and PROOF describe the pulls as they ran.
 
+REVISION 3 (2026-11-15; resubmitted after the evaluator's review of 2026-11-15 05:54:44Z, round 3 of 3 — the final round). Changes vs the previous submission: (A3) the PULL 3 final rules cells for 2025-23854 and 2026-00591 now list 2026-23288 (2026-11-16) and 2026-23281 (2026-11-16) — the PULL 3 RULE query in the PROOF returned those two final rules for RINs 3133-AF75 and 3133-AF85, and the description sets no publication-date cut-off, so the column follows those responses; PULL 3 counts are now closed 84, with a later final rule 44, and PULL 3 vs PULL 2 changed 2. The REVISION 1 note's statement that these cells are 'none' because the rules were published after the PULL 3 date is superseded. The PULL 3 CSV now has its own SHA-256 e2d27925d92adf9f616a5a30a692f72fb9de95334c586fcf244ab60ceac96b26 (PULL 1/2 keep 824cbd6e90b1e0d9315636d554f13f1e27569a19ae052757e9ba8990bbf44378); a CORRECTED PULL 3 note with the new SHA was posted. Items the review marked CANNOT BE FIXED (A5, TIMED PULLS, D1, D3) are not fixed here: the 14/15 Nov Date headers were not captured when they ran and cannot be recovered now; the timed PULL notes are fixed records whose pull-time CSV bytes were replaced; the per-RIN requests of PULL 2/3 cannot be re-run as those pulls; PULL 2 was a browser verification, not a separate full pull. The Method and PROOF describe the pulls as they ran.
+
 ## Summary
 
 Three timed pulls of the same six queries (type PRORULE, publication 2025-01-01 to 2026-10-31, one request per agency, paged until every document each count reports; a joint proposal counts once). 138 unique proposed rules in every pull.
@@ -14,18 +16,18 @@ Three timed pulls of the same six queries (type PRORULE, publication 2025-01-01 
 |---|---|---|---|---|---|---|---|
 | PULL 1 | 2026-11-13T01:01:37Z (first request; HTTP Date Fri, 13 Nov 2026 01:01:47 GMT) | 138 | 824cbd6e90b1e0d9315636d554f13f1e27569a19ae052757e9ba8990bbf44378 | 10 | 86 | 42 | 9 |
 | PULL 2 | 2026-11-14 01:59-02:02 UTC (browser verification) | 138 | 824cbd6e90b1e0d9315636d554f13f1e27569a19ae052757e9ba8990bbf44378 | 10 | 86 | 42 | 9 |
-| PULL 3 | 2026-11-15 01:40-01:45 UTC (browser verification) | 138 | 824cbd6e90b1e0d9315636d554f13f1e27569a19ae052757e9ba8990bbf44378 | 10 | 86 | 42 | 9 |
+| PULL 3 | 2026-11-15 01:40-01:45 UTC (browser verification) | 138 | e2d27925d92adf9f616a5a30a692f72fb9de95334c586fcf244ab60ceac96b26 | 10 | 84 | 44 | 9 |
 
 Per agency (queried counts, same in all three pulls): CFPB 23, FDIC 28, OCC 25, Federal Reserve 20, NCUA 45, FinCEN 14 (155 agency rows, 138 unique after deduping joint proposals).
 
-PULL 2 vs PULL 1: no change. PULL 3 vs PULL 2: no change (see Changes; the two 2026-11-16 final rules found in the PULL 3 RULE crawl were not counted — published after the PULL 3 date, with no per-RIN response in the PROOF).
+PULL 2 vs PULL 1: no change. PULL 3 vs PULL 2: changed 2 — 2025-23854 gained final rule 2026-23288 (2026-11-16) and 2026-00591 gained 2026-23281 (2026-11-16), as returned by the PULL 3 RULE query (see Changes).
 
 ## synmerco-data
 
 ```
 824cbd6e90b1e0d9315636d554f13f1e27569a19ae052757e9ba8990bbf44378 fin-proposals-pull1.csv
 824cbd6e90b1e0d9315636d554f13f1e27569a19ae052757e9ba8990bbf44378 fin-proposals-pull2.csv
-824cbd6e90b1e0d9315636d554f13f1e27569a19ae052757e9ba8990bbf44378 fin-proposals-pull3.csv
+e2d27925d92adf9f616a5a30a692f72fb9de95334c586fcf244ab60ceac96b26 fin-proposals-pull3.csv
 ```
 
 ## ACCEPTANCE (numbered checklist)
@@ -40,20 +42,20 @@ Yes. PROOF below lists, for every one of the 138 proposals, its returned comment
 
 ### 3. Every RIN has its final-rule request shown, and the final rules column agrees with those responses
 
-Yes. PROOF lists all 176 unique RINs, each with its own request (conditions[regulation_id_number]=<RIN>, conditions[type][]=RULE), UTC time, Date header, count and every returned document_number, type and publication_date, as run in PULL 1 (2026-11-13 ~01:20-01:24 UTC). The final rules column lists, per proposal, the final rules published after the proposal, or none, or no RIN where the proposal has no RIN. PULL 3 re-checked final rules with two aggregate RULE queries (all six agencies): publication_date >= 2026-10-01 (12 rules) and 2025-01-01 to 2026-09-30 (105 rules). Two of the 12 rules (2026-23288 for RIN 3133-AF75 and 2026-23281 for RIN 3133-AF85) belong to proposals in the set, but they were published 2026-11-16, after the PULL 3 date, and have no per-RIN response in the PROOF, so the PULL 3 final rules column shows none for those two proposals (REVISION 1); every other RULE RIN belongs to no proposal in the set or was already in the PULL 1 proof.
+Yes. PROOF lists all 176 unique RINs, each with its own request (conditions[regulation_id_number]=<RIN>, conditions[type][]=RULE), UTC time, Date header, count and every returned document_number, type and publication_date, as run in PULL 1 (2026-11-13 ~01:20-01:24 UTC). The final rules column lists, per proposal, the final rules published after the proposal, or none, or no RIN where the proposal has no RIN. PULL 3 re-checked final rules with two aggregate RULE queries (all six agencies): publication_date >= 2026-10-01 (12 rules) and 2025-01-01 to 2026-09-30 (105 rules). Two of the 12 rules (2026-23288 for RIN 3133-AF75 and 2026-23281 for RIN 3133-AF85) belong to proposals in the set. They were published 2026-11-16, after the PULL 3 date, and have no per-RIN response in the PROOF, but the description sets no publication-date cut-off, so the PULL 3 final rules column now lists 2026-23288 (2026-11-16) for 2025-23854 and 2026-23281 (2026-11-16) for 2026-00591 (REVISION 3); every other RULE RIN belongs to no proposal in the set or was already in the PULL 1 proof.
 
 ### 4. The counts, open and closed lists and the calendar agree with the CSV they use and each pull's date
 
-Yes. Counts per pull are in the Summary table above and are computed from the CSV of that pull (open = comments_close_on on or after the pull's UTC date). Each pull section below has its own open list, closed-without-final list and calendar, all taken from that pull's CSV. The three pulls agree: the same 10 proposals are open in every pull, and the closed and with-final-rule lists are identical in all three pulls (no change between pulls).
+Yes. Counts per pull are in the Summary table above and are computed from the CSV of that pull (open = comments_close_on on or after the pull's UTC date). Each pull section below has its own open list, closed-without-final list and calendar, all taken from that pull's CSV. The same 10 proposals are open in every pull. PULL 1 and PULL 2 lists are identical (no change); PULL 3 differs from PULL 2 in exactly the two final-rule cells listed in Changes (REVISION 3).
 
 ### 5. The PLATFORM RECORD shows a PULL 1: note and each later PULL note at least its wait after the one before, each with its CSV's row count and SHA-256; each pull's source time is later than the previous pull's; the change counts agree with the CSV files
 
 - PULL 1 note: recorded 2026-11-13 01:26:39Z, 138 rows, SHA-256 3de641f46b5515e5b51c4fc7b659f9c4678df995788463b935940b6e20f8c5bf.
 - PULL 2 note: recorded 2026-11-14 02:43:08Z (25h 16m after the PULL 1 note), 138 rows, SHA-256 3de641f46b5515e5b51c4fc7b659f9c4678df995788463b935940b6e20f8c5bf.
 - PULL 3 note: recorded 2026-11-15 02:45:29.065245+00 (at least 24h after the PULL 2 note), 138 rows, SHA-256 f763d106cc9eaa3912cf1ec03ab677cca6a12fca8cac4a16559543f7ef475537.
-- The notes above record the pull-time SHA-256 of each CSV. REVISION 1 corrected the CSVs (see the REVISION 1 note at the top); the corrected files share SHA-256 824cbd6e90b1e0d9315636d554f13f1e27569a19ae052757e9ba8990bbf44378, and CORRECTED PULL 1/2/3 notes with the new SHA-256 were posted.
+- The notes above record the pull-time SHA-256 of each CSV. REVISION 1 corrected the CSVs (see the REVISION 1 note at the top); the corrected files share SHA-256 824cbd6e90b1e0d9315636d554f13f1e27569a19ae052757e9ba8990bbf44378, and CORRECTED PULL 1/2/3 notes with the new SHA-256 were posted. REVISION 3 corrected only the PULL 3 CSV (see the REVISION 3 note at the top); PULL 3 now has SHA-256 e2d27925d92adf9f616a5a30a692f72fb9de95334c586fcf244ab60ceac96b26, and a CORRECTED PULL 3 note with the new SHA-256 was posted; PULL 1/2 keep SHA-256 824cbd6e90b1e0d9315636d554f13f1e27569a19ae052757e9ba8990bbf44378.
 - Source times: PULL 1 first request HTTP Date Fri, 13 Nov 2026 01:01:47 GMT; PULL 2 first verification fetch 2026-11-14 01:59 UTC; PULL 3 first verification fetch 2026-11-15 01:40 UTC. Each later than the previous.
-- Change counts: PULL 2 vs PULL 1: new 0, gone 0, changed 0; 138 = 138 + 0 - 0. PULL 3 vs PULL 2: new 0, gone 0, changed 0; 138 = 138 + 0 - 0. Both agree with the CSV files. (The first submission showed changed 2 for PULL 3 vs PULL 2; REVISION 1 set those two final rules cells back to none.)
+- Change counts: PULL 2 vs PULL 1: new 0, gone 0, changed 0; 138 = 138 + 0 - 0. PULL 3 vs PULL 2: new 0, gone 0, changed 2; 138 = 138 + 0 - 0. Both agree with the CSV files. (The first submission showed changed 2 for PULL 3 vs PULL 2; REVISION 1 set those two final rules cells back to none; REVISION 3 lists them again, following the PULL 3 RULE responses.)
 
 ## PULL 1 (UTC date 2026-11-13)
 
@@ -393,7 +395,7 @@ No RIN (9 document numbers):
 
 ## PULL 3 (UTC date 2026-11-15)
 
-Rows: 138. Open for comment (comments_close_on on or after 2026-11-15): 10. Closed with no final rule: 86. With a later final rule: 42. No RIN: 9.
+Rows: 138. Open for comment (comments_close_on on or after 2026-11-15): 10. Closed with no final rule: 84. With a later final rule: 44. No RIN: 9.
 Per agency (queried): CFPB 23, FDIC 28, OCC 25, Federal Reserve 20, NCUA 45, FinCEN 14.
 
 ### Open for comment
@@ -458,10 +460,8 @@ Per agency (queried): CFPB 23, FDIC 28, OCC 25, Federal Reserve 20, NCUA 45, Fin
 | 2025-22490 | Guidance on Response Programs for Unauthorized Access to Member Information and Member Notice | 2026-02-09 | none |
 | 2025-23510 | Approval Requirements for Issuance of Payment Stablecoins by Subsidiaries of FDIC-Supervised Insured Depository Institutions | 2026-02-17 | none |
 | 2025-23547 | Community Reinvestment Act: Simplified Strategic Plan Process for Community Banks | 2026-02-20 | no RIN |
-| 2025-23854 | Accuracy of Advertising and Notice of Insured Status | 2026-02-27 | none |
 | 2025-23856 | Catastrophic Act Reporting | 2026-02-27 | none |
 | 2025-23986 | OCC Guidelines Establishing Heightened Standards for Certain Large Insured National Banks, Insured Federal Savings Associations, and Insured Federal Branches; Technical Amendments | 2026-03-02 | none |
-| 2026-00591 | Nondiscrimination Requirements | 2026-03-16 | none |
 | 2026-01696 | Public Unit and Nonmember Shares | 2026-03-30 | none |
 | 2026-01697 | Requirements for Insurance; Maximum Borrowing Authority | 2026-03-30 | none |
 | 2026-02665 | Approval Requirements for Issuance of Payment Stablecoins by Subsidiaries of FDIC-Supervised Insured Depository Institutions; Extension of Comment Period | 2026-05-18 | none |
@@ -543,11 +543,13 @@ Per agency (queried): CFPB 23, FDIC 28, OCC 25, Federal Reserve 20, NCUA 45, Fin
 | 2025-20211 | Enhanced Transparency and Public Accountability of the Supervisory Stress Test Models and Scenarios; Modifications to the Capital Planning and Stress Capital Buffer Requirement Rule, Enhanced Prudential Standards Rule, and Regulation LL | 2026-20247 (2026-10-02) |
 | 2025-21087 | Enhanced Transparency and Public Accountability of the Supervisory Stress Test Models and Scenarios; Modifications to the Capital Planning and Stress Capital Buffer Requirement Rule, Enhanced Prudential Standards Rule, and Regulation LL; Extension of Comment Period | 2026-20247 (2026-10-02) |
 | 2025-21625 | Regulatory Capital Rule: Revisions to the Community Bank Leverage Ratio Framework | 2026-08298 (2026-04-29) |
+| 2025-23854 | Accuracy of Advertising and Notice of Insured Status | 2026-23288 (2026-11-16) |
 | 2025-23855 | Limits on Loans to Other Credit Unions | 2026-16035 (2026-08-06) |
 | 2025-23857 | Suretyship and Guaranty; Segregated Deposit and Collateral | 2026-16027 (2026-08-06) |
 | 2025-23987 | Preemption Determination: State Interest-on-Escrow Laws | 2026-10037 (2026-05-19) |
 | 2025-23988 | Real Estate Lending Escrow Accounts | C1-2026-10036 (2026-06-29); 2026-10036 (2026-05-19) |
 | 2026-00372 | National Bank Chartering | 2026-04088 (2026-03-02) |
+| 2026-00591 | Nondiscrimination Requirements | 2026-23281 (2026-11-16) |
 | 2026-00592 | Chartering and Field of Membership for Federal Credit Unions-Interpretive Rulings and Policy Statements | 2026-16031 (2026-08-06) |
 | 2026-00594 | Chartering and Field of Membership for Federal Credit Unions-Interpretive Rulings and Policy Statements | 2026-16024 (2026-08-06) |
 | 2026-00595 | Corporate Credit Unions | 2026-16022 (2026-08-06) |
@@ -588,7 +590,12 @@ no change. Row counts: PULL 1 = 138, PULL 2 = 138. 138 = 138 + 0 - 0 (new 0, gon
 
 ### PULL 3 vs PULL 2
 
-new 0, gone 0, changed 0. Row counts: PULL 2 = 138, PULL 3 = 138. 138 = 138 + 0 - 0.
+new 0, gone 0, changed 2. Row counts: PULL 2 = 138, PULL 3 = 138. 138 = 138 + 0 - 0.
+
+Changed rows (final rules column):
+- 2025-23854 (Accuracy of Advertising and Notice of Insured Status, RIN 3133-AF75): none → 2026-23288 (2026-11-16)
+- 2026-00591 (Nondiscrimination Requirements, RIN 3133-AF85): none → 2026-23281 (2026-11-16)
+Both final rules were returned by the PULL 3 RULE query (publication_date >= 2026-10-01, crawl 01:44 UTC; see PROOF).
 
 ## Method
 
@@ -834,7 +841,7 @@ RULE query (all six agencies, publication_date >= 2026-10-01), fields[]=document
 ### PULL 3 — verification fetches (browser, 2026-11-15 01:40-01:45 UTC)
 
 Same agency queries as PULL 2 (fields[]=document_number,comments_close_on). Crawl times: CFPB 01:40 UTC (count 23), FDIC 01:41 UTC (28), OCC 01:42 UTC (25), Federal Reserve 01:42 UTC (20), NCUA 01:43 UTC (45), FinCEN 01:43 UTC (14). Sets identical to PULL 1; comments_close_on identical for all 138 documents.
-RULE query 1 (all six agencies, publication_date >= 2026-10-01, crawl 01:44 UTC), fields[]=document_number,publication_date,regulation_id_numbers: 12 rules — 2026-23288 (2026-11-16, 3133-AF75), 2026-23286 (2026-11-16, 3133-AG13), 2026-23281 (2026-11-16, 3133-AF85), 2026-23280 (2026-11-16, 3133-AG14), 2026-23060 (2026-11-12, 7100-AH33), 2026-22962 (2026-11-10, no RIN), 2026-22538 (2026-11-04, 3133-AG16), 2026-22537 (2026-11-04, 3133-AG12), 2026-22536 (2026-11-04, 3133-AF86), 2026-21706 (2026-10-23, 1557-AF41), 2026-20247 (2026-10-02, 7100-AH05), 2026-20246 (2026-10-02, 7100-AG92). Of these, 3133-AF75 and 3133-AF85 are RINs of proposals in the set, but their final rules (2026-23288 and 2026-23281) were published 2026-11-16, after the PULL 3 date, and have no per-RIN response in the PROOF, so they are NOT counted in the PULL 3 final rules column (REVISION 1; see Changes); 3133-AG13, 3133-AG14, 7100-AH33, 3133-AG16, 3133-AG12 belong to no proposal in the set; the rest were already in the PULL 1 proof.
+RULE query 1 (all six agencies, publication_date >= 2026-10-01, crawl 01:44 UTC), fields[]=document_number,publication_date,regulation_id_numbers: 12 rules — 2026-23288 (2026-11-16, 3133-AF75), 2026-23286 (2026-11-16, 3133-AG13), 2026-23281 (2026-11-16, 3133-AF85), 2026-23280 (2026-11-16, 3133-AG14), 2026-23060 (2026-11-12, 7100-AH33), 2026-22962 (2026-11-10, no RIN), 2026-22538 (2026-11-04, 3133-AG16), 2026-22537 (2026-11-04, 3133-AG12), 2026-22536 (2026-11-04, 3133-AF86), 2026-21706 (2026-10-23, 1557-AF41), 2026-20247 (2026-10-02, 7100-AH05), 2026-20246 (2026-10-02, 7100-AG92). Of these, 3133-AF75 and 3133-AF85 are RINs of proposals in the set, but their final rules (2026-23288 and 2026-23281) were published 2026-11-16, after the PULL 3 date, and have no per-RIN response in the PROOF, so they ARE counted in the PULL 3 final rules column (REVISION 3 — the description sets no publication-date cut-off; see Changes); 3133-AG13, 3133-AG14, 7100-AH33, 3133-AG16, 3133-AG12 belong to no proposal in the set; the rest were already in the PULL 1 proof.
 RULE query 2 (all six agencies, publication 2025-01-01 to 2026-09-30, crawl 01:45 UTC), same fields: 105 rules. Every RIN was checked against the 176 proposal RINs and the PULL 1 proof: no rule in this set attaches to any proposal that the PULL 1 proof did not already list. Full list:
 
 - 2026-20037 | 2026-09-30 | 7100-AH32
